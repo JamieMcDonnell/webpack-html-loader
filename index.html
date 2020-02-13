@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>Getting Started</title>
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+  </head>
+  <body>
+      <%= require('html-loader?interpolate!./snippets/no-variables.html') %>
+      <%= require('mustache-loader!html-loader?interpolate!./snippets/variable.html')({someVariable: 'MY VARIABLE'}) %>
+      <%= require('html-loader?interpolate!./snippets/recursive.html') %>
+  </body>
+</html>

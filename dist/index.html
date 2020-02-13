@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Getting Started</title>
+    <script src="https://unpkg.com/lodash@4.16.6"></script>
+  </head>
+  <body>
+      <h1>This has no variables</h1>
+      <h1>This has a variable called MY VARIABLE</h1>
+      <h1>I am a top level include</h1>
+<%= require('html-loader?interpolate!./sub/sub.html') %>
+<%= require('mustache-loader!html-loader?interpolate!./sub/variable.html')({someVariable: 'MY SUB VARIABLE'}) %>
+  <script type="text/javascript" src="index.js"></script></body>
+</html>
