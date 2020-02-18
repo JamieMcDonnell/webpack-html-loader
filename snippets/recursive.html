@@ -1,3 +1,3 @@
 <h1>I am a top level include</h1>
-<%= require('html-loader?interpolate!./sub/sub.html') %>
-<%= require('mustache-loader!html-loader?interpolate!./sub/variable.html')({someVariable: 'MY SUB VARIABLE'}) %>
+${require('html-loader?interpolate!./sub/sub.html')}
+${require('mustache-loader!html-loader?interpolate!./sub/variable.html')({someVariable: 'MY SUB VARIABLE'})}
